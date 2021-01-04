@@ -1,0 +1,69 @@
+package dropDownPack;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+
+import java.util.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.annotations.AfterTest;
+
+public class dropDwonDemo {
+	public static WebDriver driver;
+  @Test(enabled=false)
+  public void dropDown()throws Exception {
+	  driver.get("https://www.cleartrip.com");
+	  Select dropDown= new Select(driver.findElement(By.id("Adults")));
+	  dropDown.selectByIndex(2);
+	  Thread.sleep(2000);
+	  dropDown.selectByValue("5");
+	  Thread.sleep(2000);
+	  dropDown.selectByVisibleText("9");
+	  
+  }
+  
+  @Test(enabled=true)
+  public void dropDown2()throws Exception {
+	  driver.get("https://www.spicejet.com");
+	  List <WebElement> lstdn=driver.findElements(By.tagName("select"));
+	  int visbleDdn=0;
+	  int invisibleDdn=0;
+	  int singleSelected=0;
+	  int multiSelected=0;
+	  System.out.println("Total size="+lstdn.size());
+	  for(int i=0;i<lstdn.size();i++) {
+		  if(lstdn.get(i).isDisplayed()) {
+			  visbleDdn=visbleDdn+1;
+		  }else {
+			  invisibleDdn=invisibleDdn+1;
+		  }
+		  Select selectMulti=new Select(lstdn.get(i));
+		  if(selectMulti.isMultiple())
+		  {
+			  multiSelected=multiSelected+1;
+		  }else {
+			  singleSelected=singleSelected+1;
+		  }
+			  
+		
+	  } 
+	  System.out.println("Visisble select count="+visbleDdn);
+	  System.out.println("Invisible select count="+invisibleDdn);
+	  System.out.println("MultipleSelected select count="+multiSelected);
+	  System.out.println("SingleSelected select count="+singleSelected);
+  }
+  @BeforeTest
+  public void beforeTest() {
+	  System.setProperty("webdriver.chrome.driver", "F:\\Magnitia_hyd\\SeleniumLib\\chromedriver_win32_76\\chromedriver.exe");
+	  driver = new ChromeDriver();
+  }
+
+  @AfterTest
+  public void afterTest() {
+  }
+
+}

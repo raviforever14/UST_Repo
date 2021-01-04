@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [mySuite]">
+  <test name="Test">
+    <groups>
+      <define name="All">
+        <include name="Regression"/>
+        <include name="Retesting"/>
+        <include name="Smoke Test"/>
+      </define> <!-- All -->
+      <run>
+        <include name="Retesting"/>
+        <include name="Smoke Test"/>
+        <exclude name="Regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="TestNGSamples.groupsTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Failed suite [mySuite] -->

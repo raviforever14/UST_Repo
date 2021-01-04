@@ -1,0 +1,83 @@
+package JavaScriptExecutor;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.annotations.AfterTest;
+
+public class NewTest {
+	  WebDriver driver = new ChromeDriver();
+ 
+	@Test
+
+	  public void disabletextbox()throws Exception
+		{
+			//Run browser driver to get browser
+	  System.setProperty("webdriver.chrome.driver", "F:\\Magnitia_hyd\\SeleniumLib\\chromedriver_win32_76\\chromedriver.exe");
+			
+			/*
+			 //JavaScriptsExecutor:
+			//Launch site
+			driver.get("http://www.google.co.in");         
+			WebDriverWait w=new WebDriverWait(driver,100);
+			//w.until(ExpectedConditions.visibilityOfElementLocated(locator))
+			w.until(ExpectedConditions.visibilityOfElementLocated(By.name("q")));
+			
+			driver.manage().window().maximize();
+			//Disable text-box
+			WebElement e=driver.findElement(By.name("q"));
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+			js.executeScript("arguments[0].setAttribute('disabled','true');",e);
+			Thread.sleep(5000);
+			js.executeScript("arguments[0].removeAttribute('disabled');",e);
+			*/
+	  
+		 
+			
+			//Launching website
+			driver.get("http://www.gmail.com");         
+			driver.manage().window().maximize();
+			Thread.sleep(5000);
+			//Click an element
+			JavascriptExecutor js=(JavascriptExecutor) driver;
+			//Locate element and  operate using Javascript
+			WebElement e=driver.findElement(By.name("identifier"));
+			js.executeScript("arguments[0].style.border='2px dashed Red';",e);
+			
+			js.executeScript("arguments[0].value='selenium';",e);
+			Thread.sleep(3000);
+			//Locate and operate element using javascript
+			js.executeScript("document.getElementById('identifierNext').click();");
+
+	
+  }
+  
+  @Test(enabled=false)
+  public void f() {
+	  System.setProperty("webdriver.chrome.driver", "F:\\Magnitia_hyd\\SeleniumLib\\chromedriver_win32_76\\chromedriver.exe");
+		 driver=new ChromeDriver();
+	  
+	  driver.get("http://amazon.in");
+
+	  JavascriptExecutor js = (JavascriptExecutor)driver;
+
+	  js.executeScript("scroll(0, 550)");
+
+  }
+  @Test(enabled=true)
+  
+  @BeforeTest
+  public void beforeTest() {
+  }
+
+  @AfterTest
+  public void afterTest() {
+  }
+
+}

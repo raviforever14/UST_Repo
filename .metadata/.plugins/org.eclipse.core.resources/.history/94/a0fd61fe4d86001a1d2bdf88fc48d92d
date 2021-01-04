@@ -1,0 +1,29 @@
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class dropDownSorting {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		WebDriver driver;
+		System.setProperty("webdriver.chrome.driver", "F:\\Snapdealassignment\\chromedriver_win32_v80\\chromedriver.exe");
+		 driver=new ChromeDriver();
+		 driver.get("http://seleniumpractise.blogspot.com/");
+		 List <WebElement>toolsList=driver.findElements(By.id("tools"));
+		 /*for(WebElement ele: toolsList) {
+			 String toolEle=ele.getText();
+			 
+			 
+		 }*/
+		 
+		 
+	     driver.manage().window().maximize();
+	}
+	
+
+}

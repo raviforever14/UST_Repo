@@ -1,0 +1,52 @@
+package snapdealmob;
+
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+
+public class mob_tab_product {
+	public static void main(String[] ar) throws Exception{
+		// TODO Auto-generated method stub
+		System.setProperty("webdriver.chrome.driver", "F:\\Snapdeal\\chromedriver_win32_v80\\chromedriver.exe");
+		WebDriver driver=new ChromeDriver();
+		driver.get("https://www.snapdeal.com");
+		driver.manage().window().maximize();
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		WebElement mob_tab_ele= driver.findElement(By.xpath("//span[text()='Mobile & Tablets']"));
+		
+		// MouseOver on Mobile & Tablet
+		Actions action = new Actions(driver);
+        Action mouseOn_Mob_Tab = action.moveToElement(mob_tab_ele).build();
+        mouseOn_Mob_Tab.perform();
+        driver.findElement(By.xpath("//span[text()='Smartphones']")).click();
+        driver.findElement(By.xpath("//span[text()='fromVal']")).sendKeys("2000"); 
+              
+         
+		
+		
+		
+		
+		/*driver.findElement(By.id("RoundTrip")).click();
+		driver.findElement(By.id("FromTag")).sendKeys("Hyderabad");
+		driver.findElement(By.id("ToTag")).sendKeys("Delhi");
+		driver.findElement(By.id("DepartDate")).sendKeys("02/11/2019");
+		//Thread.sleep(3000);
+		driver.findElement(By.id("ReturnDate")).sendKeys("04/11/2019");
+		new Select(driver.findElement(By.id("Adults"))).selectByValue("3");
+		//new Select(driver.findElement(By.name("country"))).selectByValue("236");
+		driver.findElement(By.id("MoreOptionsLink")).click();
+		new Select(driver.findElement(By.id("Class"))).selectByValue("First");
+		driver.findElement(By.id("AirlineAutocomplete")).sendKeys("APG Airlines (GP)");
+		driver.findElement(By.id("SearchBtn")).click();*/
+		
+
+		
+	}
+
+}

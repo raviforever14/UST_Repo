@@ -1,0 +1,23 @@
+package ust_assignment;
+
+public class revenueDetails {
+	
+	
+	public Double minibalance;
+	public Double revenue=0.00;
+	
+	public Double getBalance() {
+		return minibalance;
+	}
+	public void setBalance(Double balance) {
+		this.minibalance = balance;
+	}
+	public Double getRevenue() {
+		return revenue;
+	}
+	public void setRevenue(Double revenue) {
+		this.revenue = revenue;
+	}
+	
+
+}

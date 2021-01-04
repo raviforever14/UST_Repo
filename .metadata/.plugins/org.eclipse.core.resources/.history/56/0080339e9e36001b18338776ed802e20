@@ -1,0 +1,38 @@
+package ust_assignment;
+
+public class revenueDetails {
+	
+	
+	
+	public Double minibalance;
+	public Double revenue;
+	
+	public Double getBalance() {
+		return minibalance;
+	}
+	public void setBalance(Double balance) {
+		this.minibalance = balance;
+	}
+	public Double getRevenue() {
+		return revenue;
+	}
+	public void setRevenue(Double revenue) {
+		this.revenue = revenue;
+	}
+	
+	public Double getExhibitionRevenue(Integer noOfSeats,Double minBal ) {
+		revenue=noOfSeats*minBal;
+		return revenue;
+		
+		
+	}
+	
+	public Double getStageRevenue(Integer noOfStageEvent,Double minBal ) {
+		
+		revenue=noOfStageEvent*minBal;
+		return revenue;
+		
+		
+	}
+	
+}

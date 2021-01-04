@@ -1,0 +1,47 @@
+package searchonAmazon;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class verifySearchBox {
+	
+	public static void verifySearch(WebDriver driver)throws Exception {
+		WebElement ele=tcverifySearchItem.searchItem(driver);
+		Actions searchAction=new Actions(driver);
+		searchAction.sendKeys(ele,"diaper large size pants");
+		Thread.sleep(2000);
+		while(2>1) {
+			searchAction.sendKeys(Keys.DOWN).build().perform();
+			 String searchValue=ele.getAttribute("value");
+			   //System.out.println("search value is =="+searchValue);
+			   if(searchValue.equalsIgnoreCase("diaper large size pants")) {
+				   searchAction.sendKeys(Keys.ENTER).build().perform();
+				   Thread.sleep(2000);
+				   break; //to terminate from current loop
+			   		}
+				}
+		
+			}
+	public static void verifySelectBrand(WebDriver driver)throws Exception{
+		
+		//WebElement checkboxEle=tcverifySearchItem.selectbrandedProduct(driver);
+		System.out.println("before clicked");
+		try {
+			WebElement checkboxEle=tcverifySearchItem.selectbrandedProduct(driver);
+			checkboxEle.click();
+			
+		}catch(Exception e) {
+			WebElement checkboxEle=tcverifySearchItem.selectbrandedProduct(driver);
+		checkboxEle.click();
+		System.out.println("after clicked="+checkboxEle.isSelected());
+		}
+		/*System.out.println("after clicked="+checkboxEle.isSelected());
+		if(checkboxEle.isSelected()) {
+			System.out.println("Product is selected");
+		}*/
+		
+	}
+
+		}

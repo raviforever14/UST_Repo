@@ -1,0 +1,40 @@
+package verifyMobilePages;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+import searchonAmazon.verifySearchBox;
+
+public class MainAmazonPage {
+	
+	public static WebDriver driver;
+	@Test(priority=0, enabled=true)
+	public void runMobileItems() throws Exception{
+		
+		verifyMobileSendKey.verifyMobileFunctionality(driver);
+		
+		}
+	
+	@Test(priority=1)
+	public void runMainSearchItems() throws Exception{
+	
+		verifySearchBox.verifySearch(driver);
+		
+	}
+	@Test(priority=2)
+	public void runselectProduct()throws Exception {
+		verifySearchBox.verifySelectBrand(driver);
+	}
+
+
+@BeforeTest
+public void beforeTestMethod() {
+	System.setProperty("webdriver.chrome.driver", "F:\\Magnitia_hyd\\SeleniumLib\\chromedriver_87\\chromedriver.exe");
+	 driver=new ChromeDriver();
+	 driver.get("https://www.amazon.in");
+     driver.manage().window().maximize();
+}
+
+}

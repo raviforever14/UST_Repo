@@ -1,0 +1,48 @@
+package searchonAmazon;
+
+import java.util.List;
+
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+
+public class verifySearchBox {
+	
+	public static void verifySearch(WebDriver driver)throws Exception {
+		WebElement ele=tcverifySearchItem.searchItem(driver);
+		Actions searchAction=new Actions(driver);
+		searchAction.sendKeys(ele,"diaper large size pants");
+		Thread.sleep(2000);
+		while(2>1) {
+			searchAction.sendKeys(Keys.DOWN).build().perform();
+			 String searchValue=ele.getAttribute("value");
+			   //System.out.println("search value is =="+searchValue);
+			   if(searchValue.equalsIgnoreCase("diaper large size pants")) {
+				   searchAction.sendKeys(Keys.ENTER).build().perform();
+				   Thread.sleep(2000);
+				   break; //to terminate from current loop
+			   		}
+				}
+		
+			}
+	
+	public static void verifySelectBrand(WebDriver driver)throws Exception{
+		
+		
+		System.out.println("before clicked");
+		List<WebElement> listProduct=tcverifySearchItem.selectbrandedProduct(driver);
+		System.out.println("list size="+Integer.toString(listProduct.size()));
+		for(int i=0;i<listProduct.size(); i++) {
+			System.out.println("item name="+listProduct.get(i).getText());
+			if(listProduct.get(i).getText().equalsIgnoreCase("Huggies") && listProduct.get(i).getText().equalsIgnoreCase("Pampers")) {
+				listProduct.get(i).click();
+				break;
+			}
+			
+		}
+		
+		
+	}
+
+		}

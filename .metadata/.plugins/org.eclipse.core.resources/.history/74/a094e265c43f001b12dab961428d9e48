@@ -1,0 +1,21 @@
+package com.mmt;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
+
+public class mmtLogin {
+	
+	public static	WebDriver driver;
+	
+	
+	@Test
+	public void beforeTestMethod1() {
+		System.setProperty("webdriver.chrome.driver", "F:\\Magnitia_hyd\\SeleniumLib\\chromedriver_87\\chromedriver.exe");
+			 driver=new ChromeDriver();
+			 driver.get("https://www.makemytrip.com/");
+		  driver.manage().window().maximize();
+	
+*/	  }
+
+}

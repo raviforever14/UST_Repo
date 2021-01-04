@@ -1,0 +1,12 @@
+package loginAmazon;
+
+import org.openqa.selenium.WebDriver;
+
+public class verifyLogin {
+
+	public static void getLogin(WebDriver Driver)throws Exception{
+		
+		tcverifyLogin.clickOnAccountLink(driver);
+		
+	}
+}

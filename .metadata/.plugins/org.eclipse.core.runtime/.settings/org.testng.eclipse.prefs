@@ -1,0 +1,6 @@
+RestAssuredAPITesting.outdir=/test-output
+RestAssuredAPITesting.useProjectJar=false
+RestAssuredDemo.outdir=/test-output
+RestAssuredDemo.useProjectJar=false
+_TESTNG_ECLIPSE.useProjectJar=false
+eclipse.preferences.version=1

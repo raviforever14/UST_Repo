@@ -1,0 +1,20 @@
+package ust_assignment;
+
+public class main {
+	
+	//public Double balance;
+	//public Double revenue=0.00;
+	
+	public void mainMethod() {
+		
+		System.out.println("Main Class");
+	
+	}
+	
+	public static void main(String arg[]) {
+		main m=new main();
+		m.mainMethod();
+		
+	}
+
+}

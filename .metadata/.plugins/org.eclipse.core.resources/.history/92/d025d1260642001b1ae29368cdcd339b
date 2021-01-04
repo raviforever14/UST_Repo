@@ -1,0 +1,74 @@
+package com.mmt;
+
+import java.util.Scanner;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class mmtLogin {
+	
+	public static	WebDriver driver;
+	
+	
+	@Test(priority=1)
+	public void verifyMMTLogin() throws InterruptedException,Exception {
+		 
+		  driver.manage().window().maximize();
+		  driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		  driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[1]/ul/li[6]")).click();
+		  driver.findElement(By.id("username")).sendKeys("suraj.forever14@gmail.com");
+		  driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[2]/div[2]/section/form/div[2]/button")).click();
+		  driver.findElement(By.id("password")).sendKeys("sAMSUNG@26");
+		  WebElement eleLogin=driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[2]/div[2]/section/form/div[2]/button"));
+		  
+		  if(eleLogin.isEnabled()==true) {
+			  eleLogin.click();
+			  
+			  Scanner sc= new Scanner(System.in); //System.in is a standard input stream.
+			  System.out.print("Enter Six Digit Otp Number- ");
+			  int a= sc.nextInt();
+			  String otp=String.valueOf(a);
+			  driver.findElement(By.id("otp")).sendKeys(otp);
+			  driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[2]/div[2]/section/form/div[2]/button")).click();
+			
+			 // driver.switchTo().defaultContent();
+			  
+		  }else {
+			  
+			  driver.switchTo().alert().sendKeys("Please enter correct password");
+			  driver.switchTo().defaultContent();
+		  }		  
+	
+	  }
+	@Test(priority=2)
+	public void verifyMMTHotelSearch() throws InterruptedException,Exception {
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		WebElement userValue = driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[1]/ul/li[5]/div/p"));
+		//*[@id="SW"]/div[1]/div[1]/ul/li[5]/div/p
+		//*[@id="SW"]/div[1]/div[1]/ul/li[5]/div
+		//*[@id="SW"]/div[1]/div[1]/ul/li[5]/div/p
+		if(userValue.isDisplayed()==true) {
+			System.out.println("User value=="+userValue.isDisplayed()+ "\n"+userValue.getText());
+		driver.findElement(By.xpath("//*[@id=\"SW\"]/div[1]/div[2]/div/div/nav/ul/li[2]/a/span[2]")).click();
+		
+		System.out.println("Hotle Search clicked");
+		
+	}
+	}
+	 @BeforeTest
+	  public void loadBrowser() {
+		 System.setProperty("webdriver.chrome.driver", "F:\\Magnitia_hyd\\SeleniumLib\\chromedriver_87\\chromedriver.exe");
+		 driver=new ChromeDriver();
+		 driver.manage().timeouts().implicitlyWait(35, TimeUnit.SECONDS);
+		 driver.get("https://www.makemytrip.com/");
+	  }
+	
+
+}

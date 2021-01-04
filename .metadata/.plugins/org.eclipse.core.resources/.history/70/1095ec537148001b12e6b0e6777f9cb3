@@ -1,0 +1,26 @@
+package loginAmazon;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class tcverifyLogin {
+	static WebDriver driver;
+	static WebElement ele;
+	public static WebElement clickOnAccountLink(WebDriver driver) {
+		ele=driver.findElement(By.id("nav-link-accountList"));
+		return ele;
+	
+}
+	public static WebElement verifyUserName(WebDriver driver) {
+		ele=driver.findElement(By.id("ap_email"));
+		return ele;
+	}
+		public static WebElement clickOnContinueClickon(WebDriver driver) {
+		ele=driver.findElement(By.name("continue"));
+		return ele;
+	}
+	
+	
+
+}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="mySuite" >
+  <test name="Test">
+  
+  <groups>
+  <define name="Allmethod">
+  <include name="Regression"></include>
+  <include name="Retesting"></include>
+  <include name="Smoke Test"></include>
+  </define>
+  <run>
+  <include name="Retesting"></include>
+  <include name="Smoke Test"></include>
+  <exclude name="Regression"></exclude>
+  </run>
+  </groups>
+ 
+    <classes>
+      <!-- class name="TestNGSamples.xpathexamples"/> 
+        <class name="TestNGSamples.getcommands"/> -->
+        <class name="TestNGSamples.groupsTestNG"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- mySuite -->

@@ -1,0 +1,9 @@
+package ust_assignment;
+
+public class revenueDetails {
+	
+	public Double balance;
+	public Double revenue=0.00;
+	
+
+}

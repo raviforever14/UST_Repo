@@ -1,0 +1,43 @@
+package stepDefinitions;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import cucumber.api.java.en.When;
+
+public class stepDefs_GoogleHomepage {
+	
+	WebDriver driver;
+
+	@Given("^I launch Chrome browser$")
+	
+		public void i_launch_chrome_browser()  throws Exception{
+			System.out.println("launch Browser");
+			System.setProperty("webdriver.chrome.driver", "F:\\Snapdealassignment\\chromedriver_win32_v80\\chromedriver.exe");
+			 driver=new ChromeDriver();
+			 driver.get("https://www.google.com");
+		     driver.manage().window().maximize();
+		}
+	
+	@When("^I open Google Homepage$")
+	public void i_open_Google_homepage() throws Exception{
+		
+		System.out.println("Open Google HomePage");
+	}
+	@Then("^I verify that the page displays search text box$")
+	
+	@Test(enabled=false)
+	public void i_display_search_page_test_box() throws Exception{
+		System.out.println("Google Display search text box");
+	}
+	@Then("^the page displays Google Search button$")
+	public void google_display_search_button() throws Exception{
+		System.out.println("Google Display search button");
+	}
+	@Then("^the page displays Im Feeling Lucky button$")
+	public void google_displays_im_feeling_lucky_button() throws Exception{
+		System.out.println("Google Display I'm feeling Lucky button");
+	}
+}

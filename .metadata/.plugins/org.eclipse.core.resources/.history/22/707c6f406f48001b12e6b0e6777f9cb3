@@ -1,0 +1,10 @@
+package loginAmazon;
+
+
+
+public class verifyLogin {
+
+	public static void getLogin(WebDriver Driver)throws Exception{
+		
+	}
+}

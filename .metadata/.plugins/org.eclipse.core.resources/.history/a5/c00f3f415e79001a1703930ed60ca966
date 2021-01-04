@@ -1,0 +1,26 @@
+package searchonAmazon;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverInfo;
+import org.openqa.selenium.WebElement;
+
+public class tcverifySearchItem {
+
+	static WebDriver drver;
+	static WebElement ele;
+	public static WebElement searchItem(WebDriver driver) {
+		ele= driver.findElement(By.id("twotabsearchtextbox"));
+		
+	 return ele;
+	}
+	public static List selectbrandedProduct(WebDriver driver) {
+	//	ele= driver.findElement(By.xpath("//*[@id=\"p_89/Huggies\"]/span/a/span"));
+		List<WebElement> productList=driver.findElements(By.name("checkbox"));
+		
+	 return ele;
+	}
+	
+	}

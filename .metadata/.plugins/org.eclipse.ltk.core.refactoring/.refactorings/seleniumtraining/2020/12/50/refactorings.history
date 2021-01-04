@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;JavaPrograms.Even_&apos; to &apos;Even_Odd_Arry_Ele&apos;&#x0D;&#x0A;- Original project: &apos;seleniumtraining&apos;&#x0D;&#x0A;- Original element: &apos;JavaPrograms.Even_&apos;&#x0D;&#x0A;- Renamed element: &apos;JavaPrograms.Even_Odd_Arry_Ele&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Even_&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;JavaPrograms{Even_.java[Even_" matchStrategy="1" name="Even_Odd_Arry_Ele" qualified="false" references="true" similarDeclarations="false" stamp="1607432324250" textual="false" version="1.0"/>
+</session>

@@ -1,0 +1,49 @@
+package AlertsSamples;
+
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeTest;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
+
+public class NewTest {
+	public static WebDriver driver ;
+  @Test(enabled=false)
+  public void allestOk()throws Exception {
+	  driver.get("http://jsbin.com/usidix/1");
+	  
+	  driver.findElement(By.cssSelector("input[value=\"Go!\"]")).click();
+	  Alert a1=driver.switchTo().alert();
+	  Thread.sleep(2000);
+	  String str=a1.getText();
+	  System.out.println("value="+str);
+	  
+	  a1.accept();
+	  
+  }
+  @Test(enabled=false)
+  public void f()throws Exception {
+	  driver.get("F://Magnitia_hyd/Mindq");
+	  
+	  driver.findElement(By.cssSelector("input[value=\"Go!\"]")).click();// input
+	  Alert a1=driver.switchTo().alert();
+	  Thread.sleep(2000);
+	  String str=a1.getText();
+	  System.out.println("value="+str);
+	  
+	  a1.accept();
+	  
+  }
+  @BeforeTest
+  public void beforeTest() {
+	  System.setProperty("webdriver.chrome.driver", "F:\\Magnitia_hyd\\SeleniumLib\\chromedriver_win32_76\\chromedriver.exe");
+	  driver = new ChromeDriver();
+  }
+
+  @AfterTest
+  public void afterTest() {
+  }
+
+}
