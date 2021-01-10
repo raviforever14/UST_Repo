@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="org.openqa.selenium.WebDriverInfo"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Action"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.interactions.Actions"/>
 <fullyQualifiedTypeName name="java.lang.Thread"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="io.restassured.specification.RequestSpecification"/>
 <fullyQualifiedTypeName name="junit.framework.Assert"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="io.restassured.http.Method"/>
 <fullyQualifiedTypeName name="org.json.JSONObject"/>
 <fullyQualifiedTypeName name="io.restassured.response.Response"/>
@@ -27,7 +24,6 @@
 <fullyQualifiedTypeName name="org.testng.annotations.DataProvider"/>
 <fullyQualifiedTypeName name="groovyjarjarantlr4.v4.parse.ANTLRParser.exceptionGroup_return"/>
 <fullyQualifiedTypeName name="java.lang.Object"/>
-<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="RestAssuredDemo.RestAssuredDemo.DataforTest"/>
 <fullyQualifiedTypeName name="org.testng.annotations.Parameters"/>
 <fullyQualifiedTypeName name="Javabasics.childClass"/>
@@ -47,17 +43,21 @@
 <fullyQualifiedTypeName name="java.util.LinkedList"/>
 <fullyQualifiedTypeName name="java.util.Queue"/>
 <fullyQualifiedTypeName name="java.util.Scanner"/>
-<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.Alert"/>
 <fullyQualifiedTypeName name="java.util.concurrent.TimeUnit"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedCondition"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.ExpectedConditions"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.support.ui.WebDriverWait"/>
-<fullyQualifiedTypeName name="loginAmazon.verifyLogin"/>
 <fullyQualifiedTypeName name="java.lang.Exception"/>
 <fullyQualifiedTypeName name="loginAmazon.tcverifyLogin"/>
 <fullyQualifiedTypeName name="searchonAmazon.verifySearchBox"/>
-<fullyQualifiedTypeName name="searchonAmazon.tcverifySearchItem"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.Keys"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="org.openqa.selenium.By"/>
+<fullyQualifiedTypeName name="java.util.Set"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebDriver"/>
 <fullyQualifiedTypeName name="org.openqa.selenium.WebElement"/>
+<fullyQualifiedTypeName name="searchonAmazon.tcverifySearchItem"/>
+<fullyQualifiedTypeName name="loginAmazon.verifyLogin"/>
 </qualifiedTypeNameHistroy>

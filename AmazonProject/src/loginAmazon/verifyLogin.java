@@ -9,7 +9,7 @@ public class verifyLogin {
 		tcverifyLogin.clickOnAccountLink(driver).click();	
 		tcverifyLogin.verifyUserName(driver).sendKeys("suraj.forever14@gmail.com");
 		tcverifyLogin.clickOnContinue(driver).click();
-		tcverifyLogin.verifyPwd(driver).sendKeys("sunravikumar");
+		tcverifyLogin.verifyPwd(driver).sendKeys("sunyakr");
 		tcverifyLogin.clickOnLogin(driver).click();
 	}
 	

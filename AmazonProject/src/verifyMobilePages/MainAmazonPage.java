@@ -13,7 +13,7 @@ public class MainAmazonPage {
 	
 	public static WebDriver driver;
 	
-	@Test(priority=0, enabled=false)
+	@Test(priority=0, enabled=true)
 	public void login()throws Exception{
 		verifyLogin.getLogin(driver);
 	}
@@ -26,11 +26,9 @@ public class MainAmazonPage {
 	
 	@Test(priority=1,enabled=true)
 	public void runMainSearchItems() throws Exception{
-		//verifyLogin.getLogin(driver);
-		
-		//driver.switchTo().defaultContent();
 		verifySearchBox.verifySearch(driver);
 		verifySearchBox.verifySelectBrand(driver);
+		//verifyLogin.getLogin(driver);
 		
 	}
 	@Test(priority=3,enabled=false)

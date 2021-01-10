@@ -19,21 +19,33 @@ public class tcverifySearchItem {
 	 return ele;
 	}
 	public static WebElement selectbrandedProduct(WebDriver driver) {
-		WebElement product=driver.findElement(By.xpath("//*[@id=\"p_89/Qube By Fort Collins\"]"));
-		//List<WebElement> productList=driver.findElements(By.xpath("//*[@id=\"p_89/Qube By Fort Collins\"]"));
-		//*[@id="p_89/Qube By Fort Collins"]
+		WebElement product=driver.findElement(By.xpath("//span[contains(@class,'a-size-base a-color-base') and text()='OnePlus']"));
+		
 				
 		
 	 return product;
 	}
 	public static WebElement clickOnProcduct(WebDriver driver) {
-		WebElement clickItem=driver.findElement(By.xpath("//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[3]/div/span/div/div/div[2]/div/span/a/div/img"));
-		//*[@id=\"search\"]/div[1]/div[2]/div/span[3]/div[2]/div[3]/div/span/div/div/div[2]/div/span/a/div/img"));
+			//WebElement clickItem= driver.findElement(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
+			//WebElement clickItem= driver.findElement(By.xpath("//a[contains(text(),'OnePlus 8 Pro (Glacial Green 12GB RAM+256GB Storage)')])"));
+			//WebElement clickItem= driver.findElement(By.xpath("//a[text()='OnePlus 8 Pro (Glacial Green 12GB RAM+256GB Storage)']"));
+			WebElement clickItem= driver.findElement(By.xpath("//span[contains(@class, 'a-size-medium a-color-base a-text-normal') and text()='OnePlus 8 Pro (Glacial Green 12GB RAM+256GB Storage)']"));
 		return clickItem;
 	}
 	public static List selectSize(WebDriver driver) {
 		List<WebElement> productSize=driver.findElements(By.xpath("//*[@id='native_dropdown_selected_size_name']"));
 		return productSize;
 	}
-	
+	public static WebElement clickOnAddCart(WebDriver driver) {
+		WebElement addCartBtn=driver.findElement(By.id("add-to-cart-button"));
+		return addCartBtn;
+	}
+	public static WebElement processCheckoutBtn(WebDriver driver) {
+		WebElement processBtn=driver.findElement(By.xpath("//input[@class='a-button-input' and @aria-labelledby='attach-sidesheet-checkout-button-announce']"));
+		return processBtn;
+	}
+	public static WebElement buyNowBtn(WebDriver driver) {
+		WebElement processBtn=driver.findElement(By.xpath("//input[@id='buy-now-button' and @name='submit.buy-now']"));
+		return processBtn;
+	}	
 	}
