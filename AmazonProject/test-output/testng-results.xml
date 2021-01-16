@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="62880" started-at="2021-01-09T17:10:24Z" finished-at="2021-01-09T17:11:27Z">
+  <suite name="Default suite" duration-ms="45436" started-at="2021-01-16T18:24:54Z" finished-at="2021-01-16T18:25:39Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="62880" started-at="2021-01-09T17:10:24Z" finished-at="2021-01-09T17:11:27Z">
+    <test name="Default test" duration-ms="45436" started-at="2021-01-16T18:24:54Z" finished-at="2021-01-16T18:25:39Z">
       <class name="verifyMobilePages.MainAmazonPage">
-        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:verifyMobilePages.MainAmazonPage@3834d63f]" name="beforeTestMethod" is-config="true" duration-ms="26590" started-at="2021-01-09T22:40:24Z" finished-at="2021-01-09T22:40:50Z">
+        <test-method status="PASS" signature="beforeTestMethod()[pri:0, instance:verifyMobilePages.MainAmazonPage@3834d63f]" name="beforeTestMethod" is-config="true" duration-ms="17776" started-at="2021-01-16T23:54:54Z" finished-at="2021-01-16T23:55:11Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTestMethod -->
-        <test-method status="PASS" signature="login()[pri:0, instance:verifyMobilePages.MainAmazonPage@3834d63f]" name="login" duration-ms="8748" started-at="2021-01-09T22:40:50Z" finished-at="2021-01-09T22:40:59Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:verifyMobilePages.MainAmazonPage@3834d63f]" name="login" duration-ms="4686" started-at="2021-01-16T23:55:11Z" finished-at="2021-01-16T23:55:16Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="runMainSearchItems()[pri:1, instance:verifyMobilePages.MainAmazonPage@3834d63f]" name="runMainSearchItems" duration-ms="27522" started-at="2021-01-09T22:40:59Z" finished-at="2021-01-09T22:41:27Z">
+        <test-method status="PASS" signature="runMainSearchItems()[pri:1, instance:verifyMobilePages.MainAmazonPage@3834d63f]" name="runMainSearchItems" duration-ms="22959" started-at="2021-01-16T23:55:16Z" finished-at="2021-01-16T23:55:39Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runMainSearchItems -->

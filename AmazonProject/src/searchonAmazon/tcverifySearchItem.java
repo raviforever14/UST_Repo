@@ -13,7 +13,6 @@ public class tcverifySearchItem {
 	static WebElement ele;
 	static List list;
 	public static WebElement searchItem(WebDriver driver) {
-		//ele= driver.findElement(By.id("twotabsearchtextbox"));
 		ele= driver.findElement(By.id("twotabsearchtextbox"));
 		
 	 return ele;
@@ -26,10 +25,7 @@ public class tcverifySearchItem {
 	 return product;
 	}
 	public static WebElement clickOnProcduct(WebDriver driver) {
-			//WebElement clickItem= driver.findElement(By.xpath("//span[@class='a-size-medium a-color-base a-text-normal']"));
-			//WebElement clickItem= driver.findElement(By.xpath("//a[contains(text(),'OnePlus 8 Pro (Glacial Green 12GB RAM+256GB Storage)')])"));
-			//WebElement clickItem= driver.findElement(By.xpath("//a[text()='OnePlus 8 Pro (Glacial Green 12GB RAM+256GB Storage)']"));
-			WebElement clickItem= driver.findElement(By.xpath("//span[contains(@class, 'a-size-medium a-color-base a-text-normal') and text()='OnePlus 8 Pro (Glacial Green 12GB RAM+256GB Storage)']"));
+		WebElement clickItem= driver.findElement(By.xpath("//span[contains(@class, 'a-size-medium a-color-base a-text-normal') and text()='OnePlus 8 Pro (Glacial Green 12GB RAM+256GB Storage)']"));
 		return clickItem;
 	}
 	public static List selectSize(WebDriver driver) {

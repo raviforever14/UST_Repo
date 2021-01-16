@@ -28,8 +28,7 @@ public class MainAmazonPage {
 	public void runMainSearchItems() throws Exception{
 		verifySearchBox.verifySearch(driver);
 		verifySearchBox.verifySelectBrand(driver);
-		//verifyLogin.getLogin(driver);
-		
+			
 	}
 	@Test(priority=3,enabled=false)
 	public void runselectProduct()throws Exception {
@@ -43,7 +42,6 @@ public void beforeTestMethod() throws Exception {
 	 driver=new ChromeDriver();
 	 driver.get("https://www.amazon.in");
      driver.manage().window().maximize();
-    // verifyLogin.getLogin(driver);
      Thread.sleep(3000);
      
 }

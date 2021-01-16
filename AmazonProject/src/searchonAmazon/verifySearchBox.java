@@ -16,7 +16,7 @@ import loginAmazon.verifyLogin;
 public class verifySearchBox {
 	
 	public static void verifySearch(WebDriver driver)throws Exception {
-		//verifyLogin.getLogin(driver);
+
 		WebElement ele=tcverifySearchItem.searchItem(driver);
 		Actions searchAction=new Actions(driver);
 		searchAction.sendKeys(ele,"oneplus 8 pro");
@@ -37,16 +37,6 @@ public class verifySearchBox {
 	
 	public static void verifySelectBrand(WebDriver driver)throws Exception{
 		
-		System.out.println("before clicked");
-		/*List<WebElement> listProduct=tcverifySearchItem.selectbrandedProduct(driver);
-		
-		System.out.println("list size="+Integer.toString(listProduct.size()));
-				
-		for(int i=0;i<listProduct.size(); i++) {
-			listProduct.get(i).click();
-			
-		}
-		*/
 		tcverifySearchItem.selectbrandedProduct(driver).click();
 		Thread.sleep(2000);
 		tcverifySearchItem.clickOnProcduct(driver).click();
@@ -61,29 +51,11 @@ public class verifySearchBox {
 		 // tcverifySearchItem.clickOnAddCart(driver).click();
 		  tcverifySearchItem.buyNowBtn(driver).click();
 		  Thread.sleep(3000);
-		/* verifyLogin.getLogin(driver);
-		 Thread.sleep(3000);*/
-		 
-		  
+				  
 		 // tcverifySearchItem.processCheckoutBtn(driver).click();
 		  System.out.println("After cart clicking");
 			/*System.out.println("window name="+tabs.get(0));
 			driver.switchTo().defaultContent();*/
-			//driver.switchTo().activeElement();
-		/*List<WebElement> listProduct=tcverifySearchItem.selectSize(driver);
-		
-		System.out.println("Selected size value="+Integer.toString(listProduct.size()));
-		
-		
-		for(int i=0;i<listProduct.size(); i++) {
-			if(listProduct.get(i).getText().equalsIgnoreCase("2XL")) {
-			listProduct.get(i).click();
-			
-		}else {
-			driver.switchTo().alert().sendKeys("size not abvailable");
-			}
-		
-		}*/
 		
 
 		}
